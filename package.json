@@ -4,6 +4,31 @@
   "private": true,
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
+  "name": "anold-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    ...
+  }
+  }
+  "name": "anold-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    ...
+  }
     "start": "expo start",
     "android": "expo run:android",
     "ios": "expo run:ios",
