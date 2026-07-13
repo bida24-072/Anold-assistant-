@@ -1,0 +1,89 @@
+{
+  "expo": {
+    "name": "Anold",
+    "slug": "anold-assistant",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#050810"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anold.assistant",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Anold listens for the wake word \"Hey Anold\" and processes your voice commands.",
+        "NSSpeechRecognitionUsageDescription": "Anold converts your speech into text to understand your requests.",
+        "NSCalendarsUsageDescription": "Anold can check and create calendar events on your behalf.",
+        "NSCalendarsFullAccessUsageDescription": "Anold can check and create calendar events on your behalf.",
+        "NSContactsUsageDescription": "Anold can look up contacts to send messages on your behalf.",
+        "UIBackgroundModes": ["audio", "fetch", "processing", "remote-notification"],
+        "BGTaskSchedulerPermittedIdentifiers": ["com.anold.assistant.wakewordrefresh"]
+      }
+    },
+    "android": {
+      "package": "com.anold.assistant",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#050810"
+      },
+      "permissions": [
+        "RECORD_AUDIO",
+        "MODIFY_AUDIO_SETTINGS",
+        "RECEIVE_BOOT_COMPLETED",
+        "WAKE_LOCK",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_MICROPHONE",
+        "READ_CALENDAR",
+        "WRITE_CALENDAR",
+        "READ_CONTACTS",
+        "ACCESS_NETWORK_STATE",
+        "ACCESS_WIFI_STATE",
+        "CHANGE_WIFI_STATE",
+        "WRITE_SETTINGS",
+        "POST_NOTIFICATIONS",
+        "VIBRATE"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-secure-store"
+      ],
+      [
+        "expo-calendar",
+        {
+          "calendarPermission": "Anold accesses your calendar to check and create events on your behalf."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#00E5FF"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 26,
+            "compileSdkVersion": 34,
+            "targetSdkVersion": 34
+          },
+          "ios": {
+            "deploymentTarget": "15.1"
+          }
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "REPLACE_WITH_YOUR_EAS_PROJECT_ID"
+      }
+    }
+  }
+}
